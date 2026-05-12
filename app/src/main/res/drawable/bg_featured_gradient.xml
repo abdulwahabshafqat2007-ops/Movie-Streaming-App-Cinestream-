@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Simulates a cinematic movie poster with gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#1A237E"
+                android:centerColor="#4A148C"
+                android:endColor="#880E4F"
+                android:angle="135"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <!-- Dark overlay at bottom for text readability -->
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#00000000"
+                android:endColor="#E6000000"
+                android:angle="270"/>
+        </shape>
+    </item>
+</layer-list>

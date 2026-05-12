@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "765266526666",
+    "project_id": "movie-streaming-app-f1e32",
+    "storage_bucket": "movie-streaming-app-f1e32.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765266526666:android:10ea97ed32c86b31c3cf33",
+        "android_client_info": {
+          "package_name": "com.example.moviestreamingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765266526666-14cfk0ug03ave6equlle7l8l1q0a63jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPILs3OmkxYApZBMwlQFFied9Q80HPwnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765266526666-14cfk0ug03ave6equlle7l8l1q0a63jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

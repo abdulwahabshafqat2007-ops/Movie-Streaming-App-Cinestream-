@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    L2: ConstraintLayout
+    Demonstrates:
+      • Guideline (vertical at 30%, horizontal at 55%)
+      • Barrier (end of genre text — prevents overlap on variable text)
+      • Chain (star icon + rating + duration packed horizontally)
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:background="@drawable/bg_card"
+    android:padding="0dp">
+
+    <!-- ── GUIDELINE 1: vertical at 30% (splits thumbnail from info) ── -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.30"/>
+
+    <!-- ── GUIDELINE 2: horizontal at 55% (splits title from metadata) ── -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <!-- Movie Thumbnail (XML gradient — no raster images) -->
+    <View
+        android:id="@+id/movieThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_featured_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideVertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Play button overlay on thumbnail -->
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_play"
+        android:contentDescription="Play"
+        app:layout_constraintStart_toStartOf="@id/movieThumbnail"
+        app:layout_constraintEnd_toEndOf="@id/movieThumbnail"
+        app:layout_constraintTop_toTopOf="@id/movieThumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/movieThumbnail"/>
+
+    <!-- Movie Title (above horizontal guideline) -->
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/movie_interstellar"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toEndOf="@id/guideVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideHorizontal"/>
+
+    <!-- Genre label (below horizontal guideline) -->
+    <TextView
+        android:id="@+id/movieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_genre_interstellar"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="12sp"
+        android:paddingStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/guideVertical"
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- ── BARRIER: marks the end of variable-length genre text ── -->
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierAfterGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="movieGenre"/>
+
+    <!-- ── CHAIN: Star Icon → Rating → Duration (packed) ── -->
+    <!-- Chain start: Star icon -->
+    <ImageView
+        android:id="@+id/starIcon"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/ic_star"
+        android:contentDescription="Rating"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/barrierAfterGenre"
+        app:layout_constraintEnd_toStartOf="@id/movieRating"
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <!-- Chain middle: Rating value -->
+    <TextView
+        android:id="@+id/movieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_rating_interstellar"
+        android:textColor="@color/colorRating"
+        android:textSize="12sp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintStart_toEndOf="@id/starIcon"
+        app:layout_constraintEnd_toStartOf="@id/movieDuration"
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Chain end: Duration -->
+    <TextView
+        android:id="@+id/movieDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/card_duration_interstellar"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="12sp"
+        android:layout_marginStart="2dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toEndOf="@id/movieRating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideHorizontal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

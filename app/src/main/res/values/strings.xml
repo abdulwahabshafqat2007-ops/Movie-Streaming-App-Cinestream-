@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CineStream</string>
+
+    <!-- Featured Movie -->
+    <string name="featured_title">The Dark Knight</string>
+    <string name="featured_meta">2008  •  2h 32m  •  Action / Crime</string>
+    <string name="featured_desc">When the menacing Joker wreaks havoc on Gotham, Batman must confront his deepest fears to stop him in this defining superhero epic.</string>
+    <string name="featured_rating">9.0</string>
+
+    <!-- Buttons -->
+    <string name="btn_play">▶  Play</string>
+    <string name="btn_info">ⓘ  Info</string>
+    <string name="btn_add">＋ My List</string>
+
+    <!-- Section Headers -->
+    <string name="section_continue">Continue Watching</string>
+    <string name="section_top_picks">Top Picks For You</string>
+    <string name="section_genres">Browse by Genre</string>
+    <string name="section_history">Watch History</string>
+    <string name="section_filter">Filter Content</string>
+    <string name="section_tags">Genre Tags</string>
+    <string name="section_profile">Profile &amp; Settings</string>
+
+    <!-- Movie Titles -->
+    <string name="movie_dark_knight">The Dark Knight</string>
+    <string name="movie_interstellar">Interstellar</string>
+    <string name="movie_inception">Inception</string>
+    <string name="movie_oppenheimer">Oppenheimer</string>
+    <string name="movie_dune">Dune: Part Two</string>
+    <string name="movie_avengers">Avengers: Endgame</string>
+
+    <!-- Remaining time labels -->
+    <string name="remaining_1">1h 12m remaining</string>
+    <string name="remaining_2">2h 05m remaining</string>
+    <string name="remaining_3">45m remaining</string>
+    <string name="remaining_4">1h 55m remaining</string>
+    <string name="remaining_5">30m remaining</string>
+
+    <!-- Genre names -->
+    <string name="genre_action_adv">Action &amp; Adventure</string>
+    <string name="genre_drama">Drama</string>
+    <string name="genre_thriller">Thriller</string>
+    <string name="genre_comedy">Comedy</string>
+    <string name="genre_scifi">Sci-Fi</string>
+
+    <!-- History table -->
+    <string name="col_title">Title</string>
+    <string name="col_date">Date</string>
+    <string name="col_rating">Rating</string>
+
+    <!-- Bottom nav tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_browse">Browse</string>
+    <string name="tab_profile">Profile</string>
+
+    <!-- Profile / Settings -->
+    <string name="username">John Doe</string>
+    <string name="user_plan">Premium Plan  •  Active</string>
+    <string name="label_dark_mode">Dark Mode</string>
+    <string name="label_notifications">Push Notifications</string>
+    <string name="label_autoplay">Auto-Play Next Episode</string>
+    <string name="label_downloads">Download Quality</string>
+    <string name="notification_count">3</string>
+
+    <!-- Stats -->
+    <string name="stat_movies">47</string>
+    <string name="stat_movies_label">Movies Watched</string>
+    <string name="stat_hours">120h</string>
+    <string name="stat_hours_label">Hours Streamed</string>
+    <string name="stat_plan">Premium</string>
+    <string name="stat_plan_label">Current Plan</string>
+
+    <!-- Card info -->
+    <string name="card_genre_interstellar">Sci-Fi • Drama</string>
+    <string name="card_duration_interstellar"> • 2h 49m</string>
+    <string name="card_rating_interstellar">8.6</string>
+
+    <string name="default_web_client_id">765266526666-14cfk0ug03ave6equlle7l8l1q0a63jb.apps.googleusercontent.com</string>
+</resources>
